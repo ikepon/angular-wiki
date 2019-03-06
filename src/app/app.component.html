@@ -1,12 +1,43 @@
-<ul>
-  <li>
-    <a routerLink="/">TOP</a>
-  </li>
-  <li>
-    <a routerLink="/blog/article_1.md">Article 1</a>
-  </li>
-  <li>
-    <a routerLink="/blog/article_2.md">Article 2</a>
-  </li>
-</ul>
-<router-outlet></router-outlet>
+<header>
+  <div class="bg-dark collapse" id="navbarHeader" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">日々の開発で学んだことをまとめる wiki です。<br>何かあれば Github の issue を上げていただくか記事にコメントいただければと嬉しいです。</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://github.com/ikepon/angular-wiki" class="text-white">GitHub</a></li>
+            <li><a href="https://github.com/ikepon/angular-wiki/tree/master/src/assets" class="text-white">記事一覧</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>wiki</strong>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <ul>
+    <li>
+      <a routerLink="/">TOP</a>
+    </li>
+    <li>
+      <a routerLink="/blog/article_1.md">Article 1</a>
+    </li>
+    <li>
+      <a routerLink="/blog/article_2.md">Article 2</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
