@@ -18,7 +18,7 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
+      <a href="" class="navbar-brand d-flex align-items-center">
         <strong>wiki</strong>
       </a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,17 +27,10 @@
     </div>
   </div>
 </header>
-<div class="container">
-  <ul>
-    <li>
-      <a routerLink="/">TOP</a>
-    </li>
-    <li>
-      <a routerLink="/blog/article_1.md">Article 1</a>
-    </li>
-    <li>
-      <a routerLink="/blog/article_2.md">Article 2</a>
-    </li>
-  </ul>
-  <router-outlet></router-outlet>
+<div class="container content-margin-top">
+  <div class="row">
+    <div class="col-sm-10 offset-md-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -9,11 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class BlogComponent implements OnInit {
   post: string;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.post = 'assets/blog/' + params['id'];
-    });
+    this.post = 'assets' + this.router.url;
   }
 }

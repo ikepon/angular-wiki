@@ -5,7 +5,12 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'blog/:id', component: BlogComponent }
+  {
+    path: 'blog',
+    children: [
+      { path: '**', component: BlogComponent}
+    ]
+  }
 ];
 
 @NgModule({
