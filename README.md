@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## How to deploy
+```console
+# home.component.html を更新。以下を実行し貼り付け
+tree src/assets/blog -H blog
+# build and delpoy
+ng build --prod --base-href "https://ikepon.github.io/angular-wiki/"
+npx angular-cli-ghpages --dir="dist/angular-wiki"
+```
