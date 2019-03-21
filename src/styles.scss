@@ -29,7 +29,7 @@ h1 {
 h2 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-top: 5.0rem;
+  margin: 5.0rem auto 2.0rem;
 }
 
 a {
@@ -45,6 +45,26 @@ p {
 ul {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 3.6rem auto;
+  width: 100%;
+
+  tr {
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d4f0fd;
+    }
+
+    th, td{
+      padding: 1.2rem;
+    }
+  }
 }
 
 pre {
