@@ -112,8 +112,8 @@ array
 
 ---
 
-### その他、たまに使うやつ
-#### `delete`
+## その他、たまに使うやつ
+### `delete`
 ```ruby
 fruits = %w[apple orange banana kiwi banana]
 # => ["apple", "orange", "banana", "kiwi", "banana"]
