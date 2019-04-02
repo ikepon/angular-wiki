@@ -2,7 +2,7 @@
 SQLの実行にかかった時間がしきい値を超え，かつ指定の行数以上の行をチェックするSQLを保存する仕組み
 
 ## 設定
-```console
+```
 $ cat /etc/my.cnf
 [mysqld]
 slow_query_log=1

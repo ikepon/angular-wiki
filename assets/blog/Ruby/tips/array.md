@@ -31,7 +31,7 @@ array
 ---
 
 <details>
-<summary>配列 `[1, 2, 3, 4, 5]` から偶数のみを削除するには？</summary>
+<summary>配列 `[1, 2, 3, 4, 5]` から奇数のみを削除するには？</summary>
 
 ```ruby
 array = [1, 2, 3, 4, 5] 
