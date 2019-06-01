@@ -36,3 +36,20 @@ symbol はオブジェクトのキーに使われたりする。ただ、JSONへ
 `tsconfig.json` でこれを設定すると Null 安全性を保証してくれる。
 
 参考: [strictNullChecks - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/intro/strictnullchecks)
+
+## 型定義ファイル
+`.d.ts` の拡張子で定義された型定義ファイル。
+
+これがあれば JS で書かれたライブラリとかも TYpeScript にインポートして遣える
+
+## DefinitelyTyped
+有志のユーザーたちが自分の使いたいモジュールの型定義ファイルを作り、集めて提供しているプロジェクト
+
+数が膨大なので、使いたい npm モジュールの前に `@types/` をつけて npm のサイトで検索。
+または `yarn info @types/[module name]` すると、存在すれば表示される。
+
+`yarn info` だと自前で用意されている場合は以下のメッセージが表示される。
+> 『非推奨:このパッケージはフェイクで、オリジナルのライ ブラリが型定義ファイルを提供しているので、これをインストールする必要はありません』
+
+最新のバージョンには対応していないなど、たまに問題があるので注意が必要
+
