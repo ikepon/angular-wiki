@@ -72,6 +72,8 @@ cf: https://qiita.com/kitagawamac/items/49a1f03445b19cf407b7
 ## Action ファイル(ActionCreator)
 ※ 以下、個人開発時の書き方なので参考まで
 - `src/actions/` 下層に action ファイルを作成
+  - ActionType は `<domain>Constants.ts` みたいなファイル名で置く(以下の `CounterActionType` )
+  - ActionCreator は `<dmain>.ts` みたいなファイル名で置く(以下の `CounterActionType` 以外の部分)
   - 扱うリソースごとなどによってファイルを分けるといいかも
   - enum を使って Action を定義し、それに合わせて ActionCreator 関数を定義する
   - type は必須なので、interface で type と扱う params を定義して処理するといいかも
