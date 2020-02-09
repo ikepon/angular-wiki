@@ -45,3 +45,47 @@ URL参照時の名前をつける。
 1. モデルを変更する(models.py)
 2. マイグレーション作成( `python manage.py makemigrations` )
 3. マイグレーション実行( `python manage.py migrate` )
+
+## Python shell
+```
+python manage.py shell
+```
+
+Rails でいう `rails c` みたいなもの。
+
+ex) モデルの作成
+
+```
+>>> from polls.models import Choice, Question
+
+>>> Question.objects.all()
+<QuerySet []>
+
+>>> from django.utils import timezone
+
+>>> q = Question(question_text="What's new?", pub_date=timezone.now())
+>>> q.save()
+
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>]>
+
+>>> q.id
+1
+>>> q.pub_date
+datetime.datetime(2020, 2, 9, 4, 37, 55, 517761, tzinfo=<UTC>)
+
+>>> Question.objects.first()
+<Question: Question object (1)>
+>>> Question.objects.first().question_text
+"What's new?"
+
+>>> q.question_text = "What's up?"
+>>> q.save
+<bound method Model.save of <Question: Question object (1)>>
+
+>>> q.question_text
+"What's up?"
+
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>]>
+```
