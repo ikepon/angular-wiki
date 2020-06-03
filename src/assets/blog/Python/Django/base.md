@@ -88,4 +88,10 @@ datetime.datetime(2020, 2, 9, 4, 37, 55, 517761, tzinfo=<UTC>)
 
 >>> Question.objects.all()
 <QuerySet [<Question: Question object (1)>]>
+
+>>> q = Question.objects.get(pk=1)
+>>> q.choice_set.create(choice_text='Not much', votes=0)
+<Choice: Not much>
+>>> q.choice_set.create(choice_text='The sky', votes=0)
+<Choice: The sky>
 ```
